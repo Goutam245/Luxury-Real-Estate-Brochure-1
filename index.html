@@ -1,0 +1,1688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Villa Flor de Cabrera | $3.9M Luxury Estate Auction</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* CSS Reset and Base Styles */
+        * { 
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --navy: #0F2A3D;
+            --gold: #C9A961;
+            --light-gold: #E8D9B0;
+            --cream: #F8F5F0;
+            --dark-green: #0A3D2C;
+            --light-gray: #f8f9fa;
+            --text-dark: #1A1A1A;
+            --text-light: #666666;
+            --transition: all 0.4s cubic-bezier(0.215, 0.610, 0.355, 1);
+            --shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+            --shadow-heavy: 0 30px 60px rgba(0, 0, 0, 0.15);
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+            line-height: 1.7;
+            color: var(--text-dark);
+            overflow-x: hidden;
+            background-color: var(--cream);
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+            color: var(--navy);
+            line-height: 1.2;
+        }
+        
+        h1 {
+            font-size: 5rem;
+            letter-spacing: -0.5px;
+            line-height: 1.1;
+        }
+        
+        h2 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 80px;
+            height: 2px;
+            background-color: var(--gold);
+        }
+        
+        h3 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+        
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.15rem;
+            color: var(--text-light);
+        }
+        
+        section {
+            padding: 8rem 2rem;
+            position: relative;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 1.3rem 3rem;
+            background-color: var(--gold);
+            color: white;
+            text-decoration: none;
+            border-radius: 0;
+            font-weight: 600;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: 0.5s;
+        }
+        
+        .btn:hover:before {
+            left: 100%;
+        }
+        
+        .btn:hover {
+            background-color: #b89a55;
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--gold);
+            color: var(--navy);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--gold);
+            color: white;
+        }
+        
+        .section-subtitle {
+            font-size: 1.4rem;
+            color: var(--gold);
+            margin-bottom: 3rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+        
+        .gold-text {
+            color: var(--gold);
+        }
+        
+        .navy-bg {
+            background-color: var(--navy);
+            color: white;
+        }
+        
+        .navy-bg h2, .navy-bg h3 {
+            color: white;
+        }
+        
+        .navy-bg .section-subtitle {
+            color: var(--light-gold);
+        }
+        
+        .dark-green-bg {
+            background-color: var(--dark-green);
+            color: white;
+        }
+        
+        .dark-green-bg h2, .dark-green-bg h3 {
+            color: white;
+        }
+        
+        .cream-bg {
+            background-color: var(--cream);
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        .text-center h2:after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .text-right {
+            text-align: right;
+        }
+        
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        
+        .fade-in.appear {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Navigation */
+        .nav-dots {
+            position: fixed;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1000;
+        }
+        
+        .nav-dot {
+            display: block;
+            width: 14px;
+            height: 14px;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            margin: 18px 0;
+            cursor: pointer;
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .nav-dot:after {
+            content: '';
+            position: absolute;
+            top: -6px;
+            left: -6px;
+            right: -6px;
+            bottom: -6px;
+            border: 1px solid transparent;
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+        
+        .nav-dot.active {
+            background-color: var(--gold);
+            transform: scale(1.3);
+        }
+        
+        .nav-dot.active:after {
+            border-color: var(--gold);
+        }
+        
+        /* Section 1: Hero */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            padding: 0;
+        }
+        
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://i.ibb.co.com/3Ysg6mm5/02-Aerials-DJI-20250401082454-0016-D.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: 1;
+            transform: scale(1.1);
+            transition: transform 1.2s ease-out;
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(15, 42, 61, 0.85) 0%, rgba(15, 42, 61, 0.6) 100%);
+            z-index: 2;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            text-align: center;
+            color: white;
+            max-width: 1000px;
+            padding: 2rem;
+        }
+        
+        .hero h1 {
+            color: white;
+            font-size: 5.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            font-weight: 700;
+        }
+        
+        .hero-tagline {
+            font-size: 2rem;
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+            color: var(--light-gold);
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 4rem;
+            color: var(--gold);
+            letter-spacing: 1px;
+        }
+        
+        .agent-info {
+            background-color: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 0;
+            padding: 2.5rem;
+            margin-top: 4rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .agent-info:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background-color: var(--gold);
+        }
+        
+        .agent-photo-container {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 2rem;
+            border: 3px solid var(--gold);
+            box-shadow: var(--shadow);
+        }
+        
+        .agent-photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .agent-photo:hover {
+            transform: scale(1.05);
+        }
+        
+        .agent-name {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: white;
+            font-family: 'Cormorant Garamond', serif;
+        }
+        
+        .agent-presented {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            color: var(--light-gold);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        
+        .agent-contact {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            transition: var(--transition);
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+        
+        .contact-item:hover {
+            background-color: rgba(255, 255, 255, 0.15);
+            transform: translateY(-3px);
+        }
+        
+        .contact-item i {
+            color: var(--gold);
+            font-size: 1.2rem;
+        }
+        
+        .scroll-down {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
+            color: white;
+            font-size: 2.5rem;
+            animation: bounce 2s infinite;
+            cursor: pointer;
+            opacity: 0.8;
+            transition: var(--transition);
+        }
+        
+        .scroll-down:hover {
+            opacity: 1;
+            transform: translateX(-50%) translateY(5px);
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0) translateX(-50%);
+            }
+            40% {
+                transform: translateY(-15px) translateX(-50%);
+            }
+            60% {
+                transform: translateY(-7px) translateX(-50%);
+            }
+        }
+        
+        /* Section 2: Location & Introduction */
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+        
+        .stat-card {
+            text-align: center;
+            padding: 2.5rem 1.5rem;
+            border-radius: 0;
+            background-color: white;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .stat-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: var(--gold);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+        
+        .stat-card:hover:before {
+            transform: scaleX(1);
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-heavy);
+        }
+        
+        .stat-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--navy);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 0.5rem;
+            font-family: 'Cormorant Garamond', serif;
+        }
+        
+        .stat-text {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+        
+        .map-container {
+            margin-top: 5rem;
+            border-radius: 0;
+            overflow: hidden;
+            box-shadow: var(--shadow-heavy);
+            position: relative;
+        }
+        
+        .map-placeholder {
+            width: 100%;
+            height: 500px;
+            background-color: #e9ecef;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            font-size: 1.2rem;
+        }
+        
+        /* Section 3: Game-Changing Investment */
+        .investment-hero {
+            font-size: 1.8rem;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto 5rem;
+            color: var(--light-gold);
+            line-height: 1.6;
+            font-weight: 300;
+        }
+        
+        .investment-cards {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .investment-card {
+            background-color: white;
+            border-radius: 0;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .investment-card:hover {
+            transform: translateY(-15px);
+            box-shadow: var(--shadow-heavy);
+        }
+        
+        .investment-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .investment-card:hover .investment-img {
+            transform: scale(1.05);
+        }
+        
+        .investment-content {
+            padding: 2rem;
+        }
+        
+        .investment-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark-green);
+        }
+        
+        .investment-text {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-light);
+        }
+        
+        .investment-highlight {
+            color: var(--gold);
+            font-weight: 700;
+            font-size: 1.1rem;
+            border-top: 1px solid #eee;
+            padding-top: 1rem;
+        }
+        
+        /* Section 4: The Anchor Property */
+        .property-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: start;
+            margin-top: 4rem;
+        }
+        
+        .specs-list {
+            list-style: none;
+        }
+        
+        .specs-list li {
+            padding: 1.2rem 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+            display: flex;
+            align-items: center;
+            font-size: 1.1rem;
+        }
+        
+        .specs-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .specs-list li i {
+            color: var(--gold);
+            margin-right: 1.5rem;
+            font-size: 1.3rem;
+            width: 24px;
+        }
+        
+        .value-box {
+            background-color: white;
+            border-radius: 0;
+            padding: 3rem;
+            box-shadow: var(--shadow-heavy);
+            border-top: 4px solid var(--gold);
+        }
+        
+        .value-highlight {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--gold);
+            margin: 1.5rem 0;
+            font-family: 'Cormorant Garamond', serif;
+        }
+        
+        .equity-box {
+            background: linear-gradient(135deg, var(--navy) 0%, #1a3a52 100%);
+            color: white;
+            padding: 2.5rem;
+            margin: 2.5rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .equity-box:before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(to right, transparent, rgba(255,255,255,0.1), transparent);
+            transform: rotate(30deg);
+        }
+        
+        .equity-box h3 {
+            color: white;
+            margin-bottom: 0.5rem;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .equity-amount {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: #4CAF50;
+            position: relative;
+            z-index: 2;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        
+        .opportunity-box {
+            background-color: var(--gold);
+            color: var(--navy);
+            padding: 2.5rem;
+            border-radius: 0;
+            margin-top: 2.5rem;
+            text-align: center;
+            font-weight: 700;
+            font-size: 1.3rem;
+            letter-spacing: 1px;
+        }
+        
+        /* Section 5: Villa Gallery & Amenities */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-auto-rows: 280px;
+            gap: 1.5rem;
+            margin-top: 4rem;
+        }
+        
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            grid-column: span 4;
+        }
+        
+        .gallery-item:nth-child(1) {
+            grid-column: span 8;
+            grid-row: span 2;
+        }
+        
+        .gallery-item:nth-child(2) {
+            grid-column: span 4;
+        }
+        
+        .gallery-item:nth-child(3) {
+            grid-column: span 6;
+        }
+        
+        .gallery-item:nth-child(4) {
+            grid-column: span 6;
+        }
+        
+        .gallery-item:nth-child(5) {
+            grid-column: span 4;
+        }
+        
+        .gallery-item:nth-child(6) {
+            grid-column: span 4;
+        }
+        
+        .gallery-item:nth-child(7) {
+            grid-column: span 4;
+        }
+        
+        .gallery-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .gallery-item:hover .gallery-img {
+            transform: scale(1.08);
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 2rem;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+            color: white;
+            transform: translateY(20px);
+            opacity: 0;
+            transition: var(--transition);
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+        .amenities-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 2rem;
+            margin-top: 6rem;
+        }
+        
+        .amenity {
+            text-align: center;
+            padding: 2rem 1rem;
+            background-color: white;
+            border-radius: 0;
+            transition: var(--transition);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .amenity:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow);
+        }
+        
+        .amenity-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--navy);
+        }
+        
+        /* Section 6: Auction Details */
+        .auction-boxes {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+            margin-top: 4rem;
+        }
+        
+        .auction-box {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 0;
+            padding: 3rem 2.5rem;
+            text-align: center;
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        
+        .auction-box:hover {
+            transform: translateY(-10px);
+            background-color: rgba(255, 255, 255, 0.15);
+        }
+        
+        .auction-box.highlight {
+            border: 2px solid var(--gold);
+            transform: translateY(-10px);
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .auction-box-title {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: white;
+        }
+        
+        .chart-container {
+            margin-top: 6rem;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 0;
+            padding: 3.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        
+        .chart-placeholder {
+            height: 320px;
+            background-color: rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 0;
+            margin-top: 2rem;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1.2rem;
+        }
+        
+        .timeline {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            margin-top: 6rem;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 30px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: rgba(255, 255, 255, 0.3);
+            z-index: 1;
+        }
+        
+        .timeline-item {
+            position: relative;
+            text-align: center;
+            z-index: 2;
+            flex: 1;
+        }
+        
+        .timeline-dot {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: var(--navy);
+            margin: 0 auto 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 1.2rem;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            transition: var(--transition);
+        }
+        
+        .timeline-dot.highlight {
+            background-color: var(--gold);
+            transform: scale(1.2);
+            border-color: var(--gold);
+        }
+        
+        /* Section 7: Call to Action */
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 4rem;
+            flex-wrap: wrap;
+        }
+        
+        .contact-card {
+            background-color: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 0;
+            padding: 4rem;
+            max-width: 900px;
+            margin: 6rem auto 4rem;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            position: relative;
+        }
+        
+        .contact-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--gold), #e8d9b0, var(--gold));
+        }
+        
+        .qr-code {
+            width: 180px;
+            height: 180px;
+            background-color: white;
+            margin: 3rem auto 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 0;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            padding: 1rem;
+            box-shadow: var(--shadow);
+        }
+        
+        .legal-disclaimer {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.6);
+            text-align: center;
+            margin-top: 5rem;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #0A1A26;
+            color: rgba(255, 255, 255, 0.6);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 1200px) {
+            .container {
+                max-width: 100%;
+            }
+            
+            h1 {
+                font-size: 4.5rem;
+            }
+            
+            h2 {
+                font-size: 3.2rem;
+            }
+            
+            .gallery-grid {
+                grid-auto-rows: 240px;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            section {
+                padding: 6rem 1.5rem;
+            }
+            
+            .intro-grid, .property-layout {
+                grid-template-columns: 1fr;
+                gap: 4rem;
+            }
+            
+            .investment-cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .amenities-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .auction-boxes {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: repeat(6, 1fr);
+                grid-auto-rows: 200px;
+            }
+            
+            .gallery-item {
+                grid-column: span 3 !important;
+            }
+            
+            .gallery-item:nth-child(1) {
+                grid-column: span 6 !important;
+                grid-row: span 1;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            section {
+                padding: 5rem 1rem;
+            }
+            
+            h1 {
+                font-size: 3.5rem;
+            }
+            
+            h2 {
+                font-size: 2.8rem;
+            }
+            
+            .hero h1 {
+                font-size: 4rem;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .investment-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 350px;
+                text-align: center;
+            }
+            
+            .timeline {
+                flex-direction: column;
+                gap: 4rem;
+            }
+            
+            .timeline::before {
+                display: none;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                grid-auto-rows: 300px;
+            }
+            
+            .gallery-item {
+                grid-column: span 1 !important;
+            }
+            
+            .agent-contact {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .contact-item {
+                justify-content: center;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 3rem;
+            }
+            
+            h2 {
+                font-size: 2.4rem;
+            }
+            
+            .hero h1 {
+                font-size: 3.2rem;
+            }
+            
+            .hero-tagline {
+                font-size: 1.6rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.4rem;
+            }
+            
+            .amenities-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .contact-card {
+                padding: 3rem 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Dots -->
+    <div class="nav-dots">
+        <div class="nav-dot active" data-section="hero"></div>
+        <div class="nav-dot" data-section="location"></div>
+        <div class="nav-dot" data-section="investment"></div>
+        <div class="nav-dot" data-section="property"></div>
+        <div class="nav-dot" data-section="gallery"></div>
+        <div class="nav-dot" data-section="auction"></div>
+        <div class="nav-dot" data-section="cta"></div>
+    </div>
+    
+    <!-- SECTION 1: HERO / COVER PAGE -->
+    <section id="hero" class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Villa Flor de Cabrera</h1>
+            <div class="hero-tagline">The Emerald Coast's Crown Jewel</div>
+            <div class="hero-subtitle">Starting Bid: $3,900,000 | Estimated Value: $10M-$15M</div>
+            
+            <!-- Agent Info Card -->
+            <div class="agent-info">
+                <div class="agent-photo-container">
+                    <!-- Agent photo loaded from imgbb -->
+                    <img src="https://i.ibb.co.com/mrSpfGZ2/istockphoto-825082848-170667a.jpg" alt="Daniel Moller" class="agent-photo">
+                </div>
+                <div class="agent-presented">Presented by</div>
+                <div class="agent-name" id="agent-name">Daniel Moller</div>
+                <div class="agent-contact">
+                    <a href="tel:+19548217096" class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span id="agent-phone">+1 954-821-7096</span>
+                    </a>
+                    <a href="mailto:danielemoller@gmail.com" class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span id="agent-email">danielemoller@gmail.com</span>
+                    </a>
+                    <a href="https://auction.flordecabrera.com/" class="contact-item">
+                        <i class="fas fa-globe"></i>
+                        <span>auction.flordecabrera.com</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-down" data-section="location">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+    
+    <!-- SECTION 2: LOCATION & INTRODUCTION -->
+    <section id="location" class="cream-bg">
+        <div class="container">
+            <h2 class="text-center">The Caribbean's Best-Kept Secret</h2>
+            <div class="section-subtitle text-center">The Emerald Coast – A 15-Mile Sanctuary Between Two International Airports</div>
+            
+            <div class="intro-grid">
+                <div>
+                    <p>Discover the Dominican Republic's most exclusive coastal treasure: a stunning stretch on the North Coast nestled between Río San Juan and Cabrera. Home to the world-renowned Playa Grande Golf Course and ultra-luxury Amanera resort, this area is rapidly becoming the Caribbean's premier destination for discerning buyers.</p>
+                    <p>With pristine beaches, dramatic cliffs, and a growing ecosystem of world-class amenities, the Emerald Coast represents one of the last true opportunities for luxury coastal acquisition in the Caribbean.</p>
+                </div>
+                <div>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon">🏝️</div>
+                            <div class="stat-number">15 Miles</div>
+                            <div class="stat-text">Of pristine coastline</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">✈️</div>
+                            <div class="stat-number">2 Airports</div>
+                            <div class="stat-text">Puerto Plata (POP) & Samaná (AZS)</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">⭐</div>
+                            <div class="stat-number">World-Class</div>
+                            <div class="stat-text">Golf, dining, and resorts</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="map-container">
+                <h3 class="text-center">The Emerald Coast Luxury Corridor</h3>
+                <!-- Replace this with your map image from imgbb -->
+                <div class="map-placeholder">
+                    <!-- Upload your map image to imgbb.com and replace the src below -->
+                    <img src="https://i.ibb.co.com/99DFvZfc/Emerald-Coast-Auction-Map.png" alt="Emerald Coast Map" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div style="text-align: center; padding: 1.5rem; background-color: var(--navy); color: white;">
+                    <p style="color: white; margin-bottom: 0;">Map showing: ANI Villas, Playa Grande Golf & Ocean Club, Orchid Bay Estates, Villa Flor de Cabrera location</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- SECTION 3: GAME-CHANGING INVESTMENT -->
+    <section id="investment" class="dark-green-bg">
+        <div class="container">
+            <h2 class="text-center">🚀 The A-Rod Factor: $1 Billion Transformation</h2>
+            <div class="section-subtitle text-center">The region's elite status has been cemented by entrepreneur and baseball legend Alex Rodríguez</div>
+            
+            <div class="investment-hero">
+                "A-Rod's investment group has committed over <span style="color: var(--gold); font-weight: 700;">$1 BILLION</span> to transform Playa Grande into a world-class luxury destination, creating unprecedented value for early investors."
+            </div>
+            
+            <div class="investment-cards">
+                <div class="investment-card">
+                    <!-- A-Rod Investment Image -->
+                    <img src="https://i.ibb.co.com/Xx3DRx09/02-Aerials-DJI-20250423083452-0019-D.jpg" alt="Alex Rodriguez Investment" class="investment-img">
+                    <div class="investment-content">
+                        <h3 class="investment-title">$1+ Billion Investment</h3>
+                        <p class="investment-text">577 ultra-luxury units planned in partnership with Discovery Land Company, transforming the entire region.</p>
+                        <div class="investment-highlight">Alex Rodríguez Partnership</div>
+                    </div>
+                </div>
+                
+                <div class="investment-card">
+                    <!-- ANI Villas Image -->
+                    <img src="https://i.ibb.co.com/xqv9FPnc/02-Aerials-DJI-20250423104911-0073-D.jpg" alt="ANI Villas" class="investment-img">
+                    <div class="investment-content">
+                        <h3 class="investment-title">ÀNI Dominican Republic</h3>
+                        <p class="investment-text">Exclusive private resort on its own peninsula with 30+ dedicated staff and unparalleled luxury.</p>
+                        <div class="investment-highlight">$50,000+/night</div>
+                    </div>
+                </div>
+                
+                <div class="investment-card">
+                    <!-- Playa Grande Golf Image -->
+                    <img src="https://i.ibb.co.com/8t9qq78/02-Lobby-DSC5030.jpg" alt="Playa Grande Golf" class="investment-img">
+                    <div class="investment-content">
+                        <h3 class="investment-title">Playa Grande Golf Course</h3>
+                        <p class="investment-text">The 'Pebble Beach of the Caribbean' - 10 holes on dramatic ocean cliffs with breathtaking views.</p>
+                        <div class="investment-highlight">Robert Trent Jones Sr. / Rees Jones</div>
+                    </div>
+                </div>
+                
+                <div class="investment-card">
+                    <!-- Amanera Resort Image -->
+                    <img src="https://i.ibb.co.com/d0QcchPY/02-Lobby-DSC5245.jpg"  alt="Amanera Resort" class="investment-img">
+                    <div class="investment-content">
+                        <h3 class="investment-title">Amanera Resort</h3>
+                        <p class="investment-text">The only golf-integrated Aman resort in the world, setting the standard for ultra-luxury hospitality.</p>
+                        <div class="investment-highlight">6-Star Ultra-Luxury</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="map-container" style="margin-top: 6rem;">
+                <h3 class="text-center">Strategic Location Map</h3>
+                <!-- Location Map Image -->
+                <img src="https://i.ibb.co.com/cSqr4Tkg/Emerald-Coast-Auction-Map.png" alt="Location Map" style="width: 100%; height: 500px; object-fit: cover;">
+                <div style="text-align: center; padding: 1.5rem; background-color: rgba(0,0,0,0.7); color: white;">
+                    <p style="color: white; margin-bottom: 0;">Strategic positioning within the Emerald Coast's luxury development corridor</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- SECTION 4: THE ANCHOR PROPERTY -->
+    <section id="property">
+        <div class="container">
+            <h2 class="text-center">Villa Flor de Cabrera: Your World-Class Asset</h2>
+            <div class="section-subtitle text-center">18,200 Sq Ft of Oceanfront Luxury with Instant Equity</div>
+            
+            <div class="property-layout">
+                <div>
+                    <h3>Architectural Masterpiece Specifications</h3>
+                    <ul class="specs-list">
+                        <li><i class="fas fa-bed"></i> <strong>10 Bedrooms</strong> | 15 Bathrooms</li>
+                        <li><i class="fas fa-expand-arrows-alt"></i> <strong>18,200 sq ft</strong> Living Space</li>
+                        <li><i class="fas fa-umbrella-beach"></i> <strong>¾ Acre Oceanfront</strong> Land</li>
+                        <li><i class="fas fa-swimming-pool"></i> Infinity Pool & Jacuzzi</li>
+                        <li><i class="fas fa-baseball-ball"></i> Professional Pickleball Court</li>
+                        <li><i class="fas fa-water"></i> Private Beach Access</li>
+                        <li><i class="fas fa-theater-masks"></i> Full Cabaret/Entertainment Venue</li>
+                        <li><i class="fas fa-home"></i> Orchid Suites (4 Additional Rooms)</li>
+                        <li><i class="fas fa-utensils"></i> Gourmet Chef's Kitchen</li>
+                        <li><i class="fas fa-calendar-alt"></i> Professional Event Capabilities</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <div class="value-box">
+                        <h3>The Extraordinary Opportunity</h3>
+                        <div class="value-highlight">Starting Bid: $3,900,000</div>
+                        <p><strong>Comparable Property:</strong> $7,900,000 (Castillo Del Mar, Orchid Bay)</p>
+                        <p><strong>Estimated Market Value:</strong> $10M - $15M</p>
+                        
+                        <div class="equity-box">
+                            <h3>INSTANT EQUITY UPON PURCHASE</h3>
+                            <div class="equity-amount">$6M - $11M</div>
+                            <p style="color: rgba(255,255,255,0.9); position: relative; z-index: 2;">Potential immediate appreciation based on comparable valuations</p>
+                        </div>
+                        
+                        <h4>Proven Income Stream</h4>
+                        <p><strong>Nightly Rate:</strong> $3,500 - $7,000</p>
+                        <p><strong>Established Event Venue:</strong> Wedding & corporate retreat destination</p>
+                        <p><strong>Rental Income History:</strong> Documented performance available to qualified buyers</p>
+                    </div>
+                    
+                    <div class="opportunity-box">
+                        <h3 style="color: var(--navy); margin-bottom: 1rem;">EXCLUSIVE OPPORTUNITY</h3>
+                        <p>Acquire a premier Orchid Bay estate for <strong>60% below</strong> comparable properties</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- SECTION 5: VILLA GALLERY & AMENITIES -->
+    <section id="gallery" class="cream-bg">
+        <div class="container">
+            <h2 class="text-center">Signature Luxury & Natural Beauty</h2>
+            <div class="section-subtitle text-center">Every Corner Designed for Extraordinary Living</div>
+            
+            <div class="gallery-grid">
+                <!-- Main Villa Exterior -->
+                <div class="gallery-item">
+                    <img src="https://i.ibb.co.com/mWBLNzH/00-Entrance-DSC6385.jpg" alt="Villa Exterior" class="gallery-img">
+                    <div class="gallery-overlay">Grand Entrance & Architecture</div>
+                </div>
+                
+                <!-- Infinity Pool -->
+                <div class="gallery-item">
+                    <img src="https://i.ibb.co.com/5XLBJgN1/00-Entrance-DSC6360.jpg" alt="Infinity Pool" class="gallery-img">
+                    <div class="gallery-overlay">Ocean-View Infinity Pool</div>
+                </div>
+                
+                <!-- Living Room -->
+                <div class="gallery-item">
+                    <img src="https://i.ibb.co.com/DfR37nxX/01-Entrance-DSC4531-Enhanced-NR.jpg" alt="Living Room" class="gallery-img">
+                    <div class="gallery-overlay">Elegant Living Space</div>
+                </div>
+                
+                <!-- Master Bedroom -->
+                <div class="gallery-item">
+                    <img src="https://i.ibb.co.com/cSNT97sK/01-Entrance-DSC5065-Enhanced-NR.jpg" alt="Master Bedroom" class="gallery-img">
+                    <div class="gallery-overlay">Master Suite</div>
+                </div>
+                
+                <!-- Aerial View -->
+                <div class="gallery-item">
+                    <img src="https://i.ibb.co.com/4gngZJDJ/01-Entrance-DSC4607-Enhanced-NR.jpg" alt="Aerial View" class="gallery-img">
+                    <div class="gallery-overlay">Aerial Perspective</div>
+                </div>
+                
+                <!-- Gourmet Kitchen -->
+                <div class="gallery-item">
+                    <img src="https://i.ibb.co.com/4ytCVYK/02-Aerials-DJI-20250401125440-0073-D.jpg" alt="Gourmet Kitchen" class="gallery-img">
+                    <div class="gallery-overlay">Chef's Kitchen</div>
+                </div>
+                
+                <!-- Entertainment Space -->
+                <div class="gallery-item">
+                    <img src="https://i.ibb.co.com/KxjHRKnV/02-Aerials-DJI-20250423083342-0014-D.jpg" alt="Entertainment Space" class="gallery-img">
+                    <div class="gallery-overlay">Cabaret & Entertainment Venue</div>
+                </div>
+            </div>
+            
+            <div class="amenities-grid">
+                <div class="amenity">
+                    <div class="amenity-icon">🏊</div>
+                    <div class="amenity-text" style="font-weight: 600; color: var(--navy);">Infinity Pool</div>
+                </div>
+                <div class="amenity">
+                    <div class="amenity-icon">🎾</div>
+                    <div class="amenity-text" style="font-weight: 600; color: var(--navy);">Pickleball Court</div>
+                </div>
+                <div class="amenity">
+                    <div class="amenity-icon">🏖️</div>
+                    <div class="amenity-text" style="font-weight: 600; color: var(--navy);">Private Beach</div>
+                </div>
+                <div class="amenity">
+                    <div class="amenity-icon">🎭</div>
+                    <div class="amenity-text" style="font-weight: 600; color: var(--navy);">Cabaret Venue</div>
+                </div>
+                <div class="amenity">
+                    <div class="amenity-icon">👨‍🍳</div>
+                    <div class="amenity-text" style="font-weight: 600; color: var(--navy);">Gourmet Kitchen</div>
+                </div>
+                <div class="amenity">
+                    <div class="amenity-icon">🏡</div>
+                    <div class="amenity-text" style="font-weight: 600; color: var(--navy);">Orchid Suites</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- SECTION 6: AUCTION DETAILS -->
+    <section id="auction" class="navy-bg">
+        <div class="container">
+            <h2 class="text-center">How the Auction Works</h2>
+            <div class="section-subtitle text-center">Secure Your Position with Strategic Pre-Bidding</div>
+            
+            <div class="auction-boxes">
+                <div class="auction-box">
+                    <h3 class="auction-box-title">Starting Details</h3>
+                    <p><strong>Starting Bid:</strong> $3,900,000 USD</p>
+                    <p><strong>Bid Deposit:</strong> $50,000 (Refundable)</p>
+                    <p><strong>Auction Period:</strong> March 10-31, 2026</p>
+                    <p><strong>Early Bidding:</strong> Open Now</p>
+                    <p><strong>Reserve Price:</strong> Confidential</p>
+                </div>
+                
+                <div class="auction-box highlight">
+                    <h3 class="auction-box-title">Pre-Bid Incentives</h3>
+                    <div style="background: linear-gradient(135deg, var(--gold) 0%, #e8d9b0 100%); color: var(--navy); padding: 1.5rem; margin-bottom: 1.5rem;">
+                        <div style="font-size: 2.5rem; font-weight: 800;">5% REBATE</div>
+                        <div style="font-weight: 700;">Register by Dec 31, 2025</div>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.2); color: white; padding: 1.5rem; margin-bottom: 1.5rem;">
+                        <div style="font-size: 1.8rem; font-weight: 700;">3% REBATE</div>
+                        <div style="font-weight: 600;">Register by Mar 1, 2026</div>
+                    </div>
+                    <p style="color: #ff9999; font-weight: 600; margin-top: 1.5rem;">⚠️ Cost of Waiting: Up to $250,000+ Loss</p>
+                </div>
+                
+                <div class="auction-box">
+                    <h3 class="auction-box-title">Commission & Closing</h3>
+                    <p><strong>Buyer's Agent Commission:</strong> 3% Protected</p>
+                    <p><strong>Legal Services:</strong> Guzmán Ariza (Est. 1927)</p>
+                    <p><strong>International Recognition:</strong> Chambers & Partners rated</p>
+                    <p><strong>Closing Timeline:</strong> 45-60 days post-auction</p>
+                    <p><strong>Financing:</strong> Available for qualified buyers</p>
+                </div>
+            </div>
+            
+            <div class="chart-container">
+                <h3>Potential Savings: 5% Early Registration Rebate</h3>
+                <!-- Savings Chart Image -->
+                <img src="https://i.ibb.co.com/LL78Qw7/Screenshot-2025-12-03-024419.jpg" alt="Savings Chart" style="width: 100%; height: 300px; object-fit: cover; margin-top: 2rem;">
+                <p style="text-align: center; margin-top: 1.5rem; color: var(--light-gold);"><strong>At $12.5M bid = $625,000 savings with 5% early registration rebate</strong></p>
+            </div>
+            
+            <div class="chart-container" style="margin-top: 3rem;">
+                <h3>Comparative Market Analysis</h3>
+                <!-- Market Analysis Image -->
+                <img src="https://i.ibb.co.com/9m6rcxpC/Screenshot-2025-12-03-024311.jpg" alt="Market Analysis" style="width: 100%; height: 300px; object-fit: cover; margin-top: 2rem;">
+                <p style="text-align: center; margin-top: 1.5rem; color: var(--light-gold);"><strong>Villa Flor de Cabrera presents at 60% below comparable Orchid Bay properties</strong></p>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot">Nov 20</div>
+                    <h4>2025</h4>
+                    <p>Pre-Bidding Opens</p>
+                    <p style="font-size: 0.9rem; color: rgba(255,255,255,0.7);">Initial bids accepted</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot highlight">Dec 31</div>
+                    <h4>2025</h4>
+                    <p><strong>5% Rebate Deadline ⭐</strong></p>
+                    <p style="font-size: 0.9rem; color: rgba(255,255,255,0.7);">Maximum savings opportunity</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot">Mar 1</div>
+                    <h4>2026</h4>
+                    <p>3% Rebate Deadline</p>
+                    <p style="font-size: 0.9rem; color: rgba(255,255,255,0.7);">Final discount opportunity</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot">Mar 10-31</div>
+                    <h4>2026</h4>
+                    <p>Final Auction Period</p>
+                    <p style="font-size: 0.9rem; color: rgba(255,255,255,0.7);">Competitive bidding closes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- SECTION 7: CALL TO ACTION & CONTACT -->
+    <section id="cta" class="dark-green-bg">
+        <div class="container">
+            <h2 class="text-center">Secure Your Position Today</h2>
+            <div class="section-subtitle text-center">This is a once-in-a-generation opportunity at 60% below market value</div>
+            
+            <div class="cta-buttons">
+                <a href="https://auction.flordecabrera.com/" class="btn" style="background: linear-gradient(135deg, var(--gold) 0%, #b89a55 100%);">Submit Your Bid</a>
+                <a href="mailto:danielemoller@gmail.com?subject=Private%20Viewing%20Request%20-%20Villa%20Flor%20de%20Cabrera" class="btn btn-outline">Schedule Private Viewing</a>
+                <a href="https://i.ibb.co/XYZ123/prospectus.pdf" class="btn btn-outline">Download Full Prospectus</a>
+            </div>
+            
+            <div class="contact-card">
+                <h3>Daniel Moller</h3>
+                <p style="font-size: 1.2rem; color: var(--light-gold); margin-bottom: 2rem;">Luxury Residence Management | Fort Lauderdale, Florida</p>
+                
+                <div style="margin: 2.5rem 0; font-size: 1.1rem;">
+                    <p><i class="fas fa-envelope" style="color: var(--gold); margin-right: 10px;"></i> Email: danielemoller@gmail.com</p>
+                    <p><i class="fas fa-phone" style="color: var(--gold); margin-right: 10px;"></i> Phone: +1 954-821-7096</p>
+                    <p><i class="fas fa-globe" style="color: var(--gold); margin-right: 10px;"></i> Website: auction.flordecabrera.com</p>
+                </div>
+                
+                <div class="qr-code">
+                    <!-- QR Code Image -->
+                    <img src="https://i.ibb.co.com/S7PRDRJR/strichbild-qr-code-generator-pro-strichbild-digitales-datenformat-quich-response-schnelle-atwort-les.jpg" alt="QR Code" style="width: 100%; height: 100%; object-fit: contain;">
+                </div>
+                <p style="color: var(--light-gold); font-weight: 500; letter-spacing: 1px;">SCAN TO VISIT AUCTION SITE</p>
+            </div>
+            
+            <div class="legal-disclaimer">
+                <p>All information provided is for informational purposes only. Prospective bidders are responsible for conducting their own due diligence. Property will not be sold unless reserve price is met. Seller reserves the right to accept, reject, or counter any bid. All bids subject to terms and conditions. Broker cooperation invited. Prices, plans, and specifications subject to change without notice.</p>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">© 2025 Villa Flor de Cabrera Luxury Auction. All rights reserved.</p>
+            <p style="font-size: 0.9rem; color: rgba(255,255,255,0.5);">This brochure is for illustrative purposes only. All details subject to change. Photography represents typical views and features.</p>
+            <p style="font-size: 0.8rem; color: rgba(255,255,255,0.4); margin-top: 2rem;">Designed for discerning investors seeking exceptional value in luxury Caribbean real estate.</p>
+        </div>
+    </footer>
+    
+    <!-- JavaScript for Interactive Features -->
+    <script>
+        // Agent Information Customization
+        // ============================================
+        const agentInfo = {
+            name: "Daniel Moller",
+            phone: "+1 954-821-7096",
+            email: "danielemoller@gmail.com",
+            photo: "https://i.ibb.co/6nG8p5g/agent.jpg"
+        };
+        
+        // Apply agent info to the page
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('agent-name').textContent = agentInfo.name;
+            document.getElementById('agent-phone').textContent = agentInfo.phone;
+            document.getElementById('agent-email').textContent = agentInfo.email;
+            
+            // Update agent photo
+            const agentPhoto = document.querySelector('.agent-photo');
+            if (agentPhoto && agentInfo.photo) {
+                agentPhoto.src = agentInfo.photo;
+                agentPhoto.alt = agentInfo.name;
+            }
+            
+            // Update contact links
+            const phoneLink = document.querySelector('a[href^="tel:"]');
+            const emailLink = document.querySelector('a[href^="mailto:"]');
+            
+            if (phoneLink && agentInfo.phone) {
+                phoneLink.href = `tel:${agentInfo.phone.replace(/\s/g, '')}`;
+            }
+            
+            if (emailLink && agentInfo.email) {
+                emailLink.href = `mailto:${agentInfo.email}`;
+            }
+        });
+        
+        // Scroll Animations
+        // ============================================
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add('appear');
+                appearOnScroll.unobserve(entry.target);
+            });
+        }, { threshold: 0.15, rootMargin: "0px 0px -100px 0px" });
+        
+        // Observe all fade-in elements
+        fadeElements.forEach(element => {
+            appearOnScroll.observe(element);
+        });
+        
+        // Navigation Dots
+        // ============================================
+        const sections = document.querySelectorAll('section');
+        const navDots = document.querySelectorAll('.nav-dot');
+        const scrollDownArrow = document.querySelector('.scroll-down');
+        
+        // Update active nav dot based on scroll position
+        function updateActiveNavDot() {
+            let currentSection = '';
+            const scrollPosition = window.pageYOffset + 300;
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+            
+            navDots.forEach(dot => {
+                dot.classList.remove('active');
+                if (dot.getAttribute('data-section') === currentSection) {
+                    dot.classList.add('active');
+                }
+            });
+        }
+        
+        // Scroll to section when nav dot is clicked
+        navDots.forEach(dot => {
+            dot.addEventListener('click', function() {
+                const targetSection = this.getAttribute('data-section');
+                const targetElement = document.getElementById(targetSection);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Scroll down arrow functionality
+        if (scrollDownArrow) {
+            scrollDownArrow.addEventListener('click', function() {
+                const targetSection = this.getAttribute('data-section');
+                const targetElement = document.getElementById(targetSection);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        }
+        
+        // Parallax Effect for Hero Section
+        // ============================================
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const heroBg = document.querySelector('.hero-bg');
+            
+            if (heroBg) {
+                heroBg.style.transform = `scale(1.1) translateY(${scrolled * 0.4}px)`;
+            }
+        });
+        
+        // Initialize hero background
+        const heroBg = document.querySelector('.hero-bg');
+        if (heroBg) {
+            setTimeout(() => {
+                heroBg.style.transform = 'scale(1.1) translateY(0)';
+            }, 100);
+        }
+        
+        // Image Hover Effects for Gallery
+        // ============================================
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        
+        galleryItems.forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.zIndex = '100';
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                this.style.zIndex = '1';
+            });
+        });
+        
+        // Initialize
+        updateActiveNavDot();
+        window.addEventListener('scroll', updateActiveNavDot);
+        
+        // Add fade-in class to key elements
+        const elementsToAnimate = document.querySelectorAll('.stat-card, .investment-card, .gallery-item, .auction-box, .amenity');
+        elementsToAnimate.forEach(el => {
+            el.classList.add('fade-in');
+            appearOnScroll.observe(el);
+        });
+    </script>
+</body>
+</html>
